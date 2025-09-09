@@ -24,7 +24,7 @@ This project is designed to **demonstrate practical Data Science, MLOps, and Clo
 
 ## 📂 Project Structure
 ```bash
-/chatbot-rag/
+/chatbot-zen/
 ├── data/           # Source documents (PDF, TXT)
 ├── src/            # Python source code
 ├── docker/         # Dockerfile & compose
@@ -32,3 +32,30 @@ This project is designed to **demonstrate practical Data Science, MLOps, and Clo
 ├── tests/          # Unit tests
 ├── .github/        # GitHub Actions workflows
 └── README.md       # Documentation
+
+## 📊 Architecture
+
+flowchart TD
+    subgraph User
+        A[User Query]
+    end
+
+    subgraph Backend
+        B[FastAPI Endpoint]
+        C[Retriever + Embeddings Search]
+        D[LLM - OpenAI / Llama3]
+    end
+
+    subgraph Data
+        E[(Vector DB - FAISS/ChromaDB)]
+        F[(Docs - PDF/TXT)]
+    end
+
+    subgraph Cloud
+        G[(Cloud Run / ECS / Azure App Service)]
+    end
+
+    A --> B --> C --> E
+    C --> D --> B
+    F --> E
+    B --> G

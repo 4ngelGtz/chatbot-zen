@@ -1,0 +1,31 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# --- Virtual envs ---
+.venv/
+env/
+venv/
+ENV/
+
+# --- Jupyter / Notebooks ---
+.ipynb_checkpoints
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
+
+# --- Data outputs ---
+data/raw_transcripts/
+data/videos.json
+data/transcripts.jsonl
+data/chunks/
+
+# --- Secrets ---
+.env

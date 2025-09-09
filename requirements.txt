@@ -1,0 +1,19 @@
+# --- Core ---
+python-dotenv>=1.0.1
+tqdm>=4.66.5
+pydantic>=2.8.2
+pandas>=2.2.2
+
+# --- Ingestion ---
+yt-dlp>=2025.7.7
+youtube-transcript-api>=0.6.2
+
+# --- RAG prep ---
+langchain>=0.2.12
+langchain-community>=0.2.11
+tiktoken>=0.7.0
+
+# Optional: embeddings/ANN later
+# openai>=1.43.0
+# faiss-cpu>=1.8.0.post1
+# chromadb>=0.5.5
